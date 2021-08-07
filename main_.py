@@ -12,13 +12,11 @@ import pandas as pd
 import docx2txt
 import constants as cs
 import utils
-from spacy.matcher import Matcher
 from pdfminer.converter import TextConverter
 from pdfminer.pdfinterp import PDFPageInterpreter
 from pdfminer.pdfinterp import PDFResourceManager
 from pdfminer.layout import LAParams
 from pdfminer.pdfpage import PDFPage
-from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 from nltk import word_tokenize
 import spacy
