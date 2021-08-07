@@ -8,8 +8,6 @@ import io
 import os
 import re
 import nltk
-import pandas as pd
-import docx2txt
 import constants as cs
 import utils
 from pdfminer.converter import TextConverter
@@ -47,8 +45,8 @@ def extract_text(file_path, extension):
     if extension == '.pdf':
         for page in extract_text_from_pdf(file_path):
             text += ' ' + page
-    elif extension == '.docx' or extension == '.doc':
-        text = extract_text_from_doc(file_path)
+    else:
+        raise ValueError("file is not pdf")
     return text
 
 
